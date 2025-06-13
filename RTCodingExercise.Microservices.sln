@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationEvents", "src\Bu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVC.UnitTests", "src\Web\WebMVC.UnitTests\WebMVC.UnitTests.csproj", "{29902EB0-0A34-4860-B386-F26A6A9E83DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plates.Shared", "src\Plates.Shared\Plates.Shared.csproj", "{C8805E4E-D1F7-45F0-AAB4-FA88AA520053}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{29902EB0-0A34-4860-B386-F26A6A9E83DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29902EB0-0A34-4860-B386-F26A6A9E83DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29902EB0-0A34-4860-B386-F26A6A9E83DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8805E4E-D1F7-45F0-AAB4-FA88AA520053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8805E4E-D1F7-45F0-AAB4-FA88AA520053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8805E4E-D1F7-45F0-AAB4-FA88AA520053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8805E4E-D1F7-45F0-AAB4-FA88AA520053}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
