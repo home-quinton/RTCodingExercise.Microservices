@@ -1,0 +1,38 @@
+﻿@using Plates.Shared
+@using WebMVC.ViewModels
+
+@model PlateDTO
+
+@{
+    ViewData["Title"] = "Create Plate";
+}
+
+<h2>Create Plate</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Registration" class="control-label"></label>
+        <input asp-for="Registration" class="form-control" />
+        <span asp-validation-for="Registration" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PurchasePrice" class="control-label"></label>
+        <input asp-for="PurchasePrice" class="form-control type="number" step="0.01" min="0" inputmode="decimal" />
+        <span asp-validation-for="PurchasePrice" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SalePrice" class="control-label"></label>
+        <input asp-for="SalePrice" class="form-control type=" number" step="0.01" min="0" inputmode="decimal" />
+        <span asp-validation-for="SalePrice" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

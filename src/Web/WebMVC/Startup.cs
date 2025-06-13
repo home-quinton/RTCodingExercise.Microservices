@@ -1,5 +1,9 @@
 ﻿using MassTransit;
 using RabbitMQ.Client;
+using System.Text;
+using WebMVC.Clients;
+using WebMVC.Config;
+using WebMVC.Services;
 
 namespace RTCodingExercise.WebMVC
 {
@@ -16,6 +20,7 @@ namespace RTCodingExercise.WebMVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddLogging();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages().AddRazorRuntimeCompilation();
 
@@ -45,6 +50,10 @@ namespace RTCodingExercise.WebMVC
             });
 
             services.AddMassTransitHostedService();
+            services.AddHttpClient<IPlateClient>();
+            services.Configure<PlateServiceConfig>(Configuration.GetSection("PlateServiceConfig"));
+            services.AddScoped<IPlateService, PlateService>();
+            services.AddScoped<IPlateClient, PlateClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
